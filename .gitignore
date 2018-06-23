@@ -1,5 +1,5 @@
 node_modules
 *.log
 dist
-webpack.config.js
+config/webpack.config.js
 config/webpack.srv.js
