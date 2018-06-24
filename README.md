@@ -1,5 +1,11 @@
 # Webpack toolchain - Desenvolvimento web vanilla
 
+### Para inicializar
+#### NPM
+npm i
+#### YARN
+yarn
+
 ### Para rodar webpack dev server com hot reloading
 #### NPM
 npm run dev
