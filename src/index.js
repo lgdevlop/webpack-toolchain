@@ -1,4 +1,4 @@
-import './css/style.css'
+import './assets'
 import './index.html'
 console.log('Webpack Rules!')
 document.body.insertAdjacentHTML('beforeend', '<h1>Webpack Rules!</h1>')
