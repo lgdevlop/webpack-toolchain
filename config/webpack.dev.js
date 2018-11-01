@@ -1,20 +1,27 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   entry: {
-    bundle: './src/index.js'
+    bundle: "./src/index.js"
   },
-  mode: 'development',
+  mode: "development",
   output: {
-    filename: './js/[name].js',
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/'
+    filename: "./js/[name].js",
+    path: path.resolve(__dirname, "../dist"),
+    publicPath: "/"
   },
   devServer: {
     historyApiFallback: true,
     port: 8080,
-    contentBase: 'dist',
-    overlay: true
+    host: "0.0.0.0",
+    contentBase: "dist",
+    overlay: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization"
+    }
   },
   module: {
     rules: [
@@ -22,13 +29,13 @@ module.exports = {
         test: /\.s?[ac]ss$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: "style-loader"
           },
           {
-            loader: 'css-loader'
+            loader: "css-loader"
           },
           {
-            loader: 'sass-loader'
+            loader: "sass-loader"
           }
         ]
       },
@@ -36,18 +43,18 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: 'index.html'
+              name: "index.html"
             }
           },
           {
-            loader: 'extract-loader'
+            loader: "extract-loader"
           },
           {
-            loader: 'html-loader',
+            loader: "html-loader",
             options: {
-              attrs: ['img:src']
+              attrs: ["img:src"]
             }
           }
         ]
@@ -56,9 +63,9 @@ module.exports = {
         test: /\.(jpg|gif|png|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name:'img/[name].[ext]'
+              name: "img/[name].[ext]"
             }
           }
         ]
@@ -67,15 +74,15 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name:'[name].[ext]',
-              publicPath: '../fonts/',
-              outputPath: 'fonts/'
+              name: "[name].[ext]",
+              publicPath: "../fonts/",
+              outputPath: "fonts/"
             }
           }
         ]
       }
     ]
-  },
-}
+  }
+};
