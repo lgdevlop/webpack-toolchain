@@ -1,29 +1,55 @@
 # Webpack toolchain - Desenvolvimento web vanilla
 
-### Para inicializar
+- Para inicializar
+  - **NPM**
 
-- NPM
-  - `npm i`
-- YARN
-  - `yarn`
+    ```bash
+    npm i
+    ```
 
-### Para rodar webpack dev server com hot reloading
+  - **YARN**
+  
+    ```bash
+    yarn
+    ```
 
-- NPM
-- `npm run dev`
-- YARN
-  - `yarn dev`
+- Para rodar webpack dev server com hot reload
+  - **NPM**
 
-### Para buildar
+  ```bash
+  npm run dev
+  ```
+  
+  - **YARN**
 
-- NPM
-  - `npm run build`
-- YARN
-  - `yarn build`
+  ```bash
+  yarn dev
+  ```
 
-### Para subir servidor express para servir o conteudo buildado
+- Para buildar
 
-- NPM
-  - `npm run server`
-- YARN
-  - `yarn server`
+  - **NPM**
+
+    ```bash
+      npm run build
+    ```
+
+  - **YARN**
+
+    ```bash
+      yarn build
+    ```
+
+- Para subir servidor express para servir o conteudo buildado
+
+  - **NPM**
+
+    ```bash
+      npm run server
+    ```
+
+  - **YARN**
+
+    ```bash
+      yarn server
+    ```
