@@ -1,10 +1,10 @@
 const express = require('express')
-
 const server = express()
 const public = express.static('./dist')
+const PORT = 8080
 
 server.use(public)
 
-server.listen(8080, () => {
-  console.log('Servidor escutando...')
+server.listen(PORT, () => {
+  console.log('Servidor escutando na porta...', PORT)
 })
