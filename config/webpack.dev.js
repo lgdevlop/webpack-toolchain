@@ -1,5 +1,7 @@
 const path = require("path");
 
+const PORT = process.env.PORT || 8080
+
 module.exports = {
   entry: {
     bundle: "./src/index.js"
@@ -12,7 +14,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    port: 8080,
+    port: PORT,
     host: "0.0.0.0",
     contentBase: "dist",
     overlay: true,
